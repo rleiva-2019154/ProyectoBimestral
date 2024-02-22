@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+import mongoose from "mongoose"
 
 const userSchema = mongoose.Schema({
     name: {
@@ -7,7 +7,7 @@ const userSchema = mongoose.Schema({
     },
     surname: {
         type: String,
-        unique: true,
+        require: true
     },
     username: {
         type: String,
@@ -17,7 +17,7 @@ const userSchema = mongoose.Schema({
     },
     password: {
         type: String,
-        minLength: [8, 'Password must be characteres'],
+        minLength: [8, 'Password must be 8 characteres'],
         require: true
     },
     email: {
@@ -33,7 +33,7 @@ const userSchema = mongoose.Schema({
     role: {
         type: String,
         uppercase: true,
-        enum: ['ADMIN, CLIENT'],
+        enum: ['ADMIN_ROLE', 'CLIENT_ROLE'],
         require: true
     }
 })
