@@ -1,0 +1,145 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "ProyectoBimestral",
+    "dateExported": "2024-02-23T02:11:57.722Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "459d88ad-791c-4b29-8f67-437b0fae56f7",
+            "colId": "e347b162-eefd-4103-9126-a59e3beef1a7",
+            "containerId": "",
+            "name": "Test",
+            "url": "/test",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-02-22T02:38:56.323Z",
+            "modified": "2024-02-23T02:00:23.078Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "f2b53971-936f-4885-a675-b59b752d7e07",
+            "colId": "e347b162-eefd-4103-9126-a59e3beef1a7",
+            "containerId": "",
+            "name": "registerClient",
+            "url": "/registerClient",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-02-22T02:39:25.662Z",
+            "modified": "2024-02-23T02:03:42.408Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "name",
+                        "value": "Rudgar"
+                    },
+                    {
+                        "name": "surname",
+                        "value": "Leiva"
+                    },
+                    {
+                        "name": "username",
+                        "value": "rleiva"
+                    },
+                    {
+                        "name": "password",
+                        "value": "12345678"
+                    },
+                    {
+                        "name": "email",
+                        "value": "rleiva@gmail.com"
+                    },
+                    {
+                        "name": "phone",
+                        "value": "12345678"
+                    },
+                    {
+                        "name": "role",
+                        "value": "asdfasdf"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "cb7dd206-2ac0-4edb-aec6-6a5c58c1da51",
+            "colId": "e347b162-eefd-4103-9126-a59e3beef1a7",
+            "containerId": "",
+            "name": "login",
+            "url": "/login",
+            "method": "POST",
+            "sortNum": 35000,
+            "created": "2024-02-22T02:46:35.420Z",
+            "modified": "2024-02-23T02:03:51.548Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "username",
+                        "value": "rleiva"
+                    },
+                    {
+                        "name": "password",
+                        "value": "12345678"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "11ed7ad3-ffba-4d44-a177-003ca52e98f6",
+            "colId": "e347b162-eefd-4103-9126-a59e3beef1a7",
+            "containerId": "",
+            "name": "registerAdmin",
+            "url": "",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2024-02-22T02:39:44.985Z",
+            "modified": "2024-02-22T02:39:44.985Z",
+            "headers": []
+        },
+        {
+            "_id": "e3d4e4f9-6584-48ea-ac13-42f1620fa57c",
+            "colId": "e347b162-eefd-4103-9126-a59e3beef1a7",
+            "containerId": "",
+            "name": "update",
+            "url": "/update/65d6b4ac40657d43dbd013de",
+            "method": "PUT",
+            "sortNum": 70000,
+            "created": "2024-02-22T02:49:59.797Z",
+            "modified": "2024-02-23T02:04:25.807Z",
+            "headers": [
+                {
+                    "name": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWQ2YjRhYzQwNjU3ZDQzZGJkMDEzZGUiLCJ1c2VybmFtZSI6InJsZWl2YSIsIm5hbWUiOiJPbGl2ZXIiLCJyb2xlIjoiQ0xJRU5UX1JPTEUiLCJpYXQiOjE3MDg2NTM4MzEsImV4cCI6MTcwODY2NDYzMX0.p8mXnFIx61VbkoLgR5K8jNas8X_Xk-PUc7hYG05UHy8"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "password",
+                        "value": "12345678"
+                    }
+                ]
+            },
+            "tests": []
+        }
+    ],
+    "settings": {
+        "options": {
+            "baseUrl": "localhost:2656"
+        }
+    }
+}
