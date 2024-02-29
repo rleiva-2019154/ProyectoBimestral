@@ -36,6 +36,8 @@ const userSchema = mongoose.Schema({
         enum: ['ADMIN_ROLE', 'CLIENT_ROLE'],
         require: true
     }
+}, {
+    versionKey: false //Deshabilita el __v (version del documento)
 })
 
 export default mongoose.model('user', userSchema)

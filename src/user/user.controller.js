@@ -1,7 +1,7 @@
 'use strict'
 
 import User from './user.model.js'
-import { encrypt, checkPassword, checkUpdateClient} from '../utils/validator.js'
+import { encrypt, checkPassword, checkUpdate} from '../utils/validator.js'
 import { generateJwt } from '../utils/jwt.js'
 
 export const test = (req, res) =>{
@@ -123,7 +123,7 @@ export const update = async(req, res) => {//Sirve para datos generales, menos co
         //Encriptar contraseña
         data.password = await encrypt(data.password)
         //validar que data no este vacío
-        let update = checkUpdateClient(data, id)
+        let update = checkUpdate(data, id)
         if(!update) return res.status(400).send({message: `Have submitted some data that cannot be updated`})
         //Validar si tiene permisos (tokenización) X hoy no lo vemos X
         //Actualizar la db
@@ -143,6 +143,14 @@ export const update = async(req, res) => {//Sirve para datos generales, menos co
         return res.status(500).send({message: `Error updating account`})
     }
 }
+
+export const updatePassword = async(req, res)=>{
+    try {
+        
+    } catch (err) {
+        console.error(err)
+    }
+} 
 
 export const deleteUser = async(req, res)=>{
     try{

@@ -22,20 +22,6 @@ export const checkPassword = async(password, hash) => {
     }
 }
 
-export const checkUpdateClient = (data, userId)=>{
-    if (userId){
-        //validamos si data esta vacío   o 
-        if(Object.entries(data).length === 0
-        || data.role 
-        || data.role == ''){
-            return false
-        }
-        return true
-    }
-}
-
-//export const checkDeleteClient = (data)
-
 export const checkUpdate = (data, userId)=>{
     if (userId){
         //validamos si data esta vacío   o 

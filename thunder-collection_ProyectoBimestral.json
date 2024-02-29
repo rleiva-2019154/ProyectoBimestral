@@ -1,0 +1,223 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "ProyectoBimestral",
+    "dateExported": "2024-02-29T03:19:30.292Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "0be2afc0-fa39-4b4a-9a3b-c64533862598",
+            "name": "Category",
+            "containerId": "",
+            "created": "2024-02-28T00:46:05.420Z",
+            "sortNum": 10000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "d15ce583-8850-41a6-8d59-83a9f234222a",
+            "colId": "99fce810-9ba5-495b-b5ee-2d2902e0322e",
+            "containerId": "",
+            "name": "Test",
+            "url": "/test",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-02-28T00:45:45.674Z",
+            "modified": "2024-02-28T00:45:45.674Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "d3d83024-b1dd-4776-bf3b-7c5351338684",
+            "colId": "99fce810-9ba5-495b-b5ee-2d2902e0322e",
+            "containerId": "",
+            "name": "registerClient",
+            "url": "/registerClient",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-02-28T00:45:45.675Z",
+            "modified": "2024-02-28T00:45:45.675Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "name",
+                        "value": "Rudgar"
+                    },
+                    {
+                        "name": "surname",
+                        "value": "Leiva"
+                    },
+                    {
+                        "name": "username",
+                        "value": "rleiva"
+                    },
+                    {
+                        "name": "password",
+                        "value": "12345678"
+                    },
+                    {
+                        "name": "email",
+                        "value": "rleiva@gmail.com"
+                    },
+                    {
+                        "name": "phone",
+                        "value": "12345678"
+                    },
+                    {
+                        "name": "role",
+                        "value": "asdfasdf"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "c1ea3dd7-1131-40ca-bbfb-654f884341f2",
+            "colId": "99fce810-9ba5-495b-b5ee-2d2902e0322e",
+            "containerId": "",
+            "name": "login",
+            "url": "/login",
+            "method": "POST",
+            "sortNum": 35000,
+            "created": "2024-02-28T00:45:45.677Z",
+            "modified": "2024-02-28T00:45:45.677Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "username",
+                        "value": "rleiva"
+                    },
+                    {
+                        "name": "password",
+                        "value": "12345678"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "b21b0f86-28d1-4a7a-b8ac-6c6d7f587c7f",
+            "colId": "99fce810-9ba5-495b-b5ee-2d2902e0322e",
+            "containerId": "",
+            "name": "registerAdmin",
+            "url": "",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2024-02-28T00:45:45.676Z",
+            "modified": "2024-02-28T00:45:45.676Z",
+            "headers": []
+        },
+        {
+            "_id": "88a114e8-5bcf-4861-87db-bb8d4eb3ff90",
+            "colId": "99fce810-9ba5-495b-b5ee-2d2902e0322e",
+            "containerId": "",
+            "name": "update",
+            "url": "/update/65d6b4ac40657d43dbd013de",
+            "method": "PUT",
+            "sortNum": 70000,
+            "created": "2024-02-28T00:45:45.678Z",
+            "modified": "2024-02-28T00:45:45.678Z",
+            "headers": [
+                {
+                    "name": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWQ2YjRhYzQwNjU3ZDQzZGJkMDEzZGUiLCJ1c2VybmFtZSI6InJsZWl2YSIsIm5hbWUiOiJPbGl2ZXIiLCJyb2xlIjoiQ0xJRU5UX1JPTEUiLCJpYXQiOjE3MDg2NTM4MzEsImV4cCI6MTcwODY2NDYzMX0.p8mXnFIx61VbkoLgR5K8jNas8X_Xk-PUc7hYG05UHy8"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "password",
+                        "value": "12345678"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "0bf833b7-23d4-415e-8360-e152fd807a26",
+            "colId": "99fce810-9ba5-495b-b5ee-2d2902e0322e",
+            "containerId": "0be2afc0-fa39-4b4a-9a3b-c64533862598",
+            "name": "AddCategory",
+            "url": "/saveC",
+            "method": "POST",
+            "sortNum": 80000,
+            "created": "2024-02-28T00:49:03.137Z",
+            "modified": "2024-02-28T01:09:17.284Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "name",
+                        "value": "Electrodomesticos"
+                    },
+                    {
+                        "name": "description",
+                        "value": "Estufas"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "9de3e675-d808-4e95-99c6-3f018e9c3e55",
+            "colId": "99fce810-9ba5-495b-b5ee-2d2902e0322e",
+            "containerId": "0be2afc0-fa39-4b4a-9a3b-c64533862598",
+            "name": "ListCategories",
+            "url": "/listC",
+            "method": "GET",
+            "sortNum": 90000,
+            "created": "2024-02-28T01:06:58.254Z",
+            "modified": "2024-02-28T01:09:49.749Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "13fee883-0dcc-45d0-bee2-5ae0b21a0a9b",
+            "colId": "99fce810-9ba5-495b-b5ee-2d2902e0322e",
+            "containerId": "0be2afc0-fa39-4b4a-9a3b-c64533862598",
+            "name": "UpdateCategory",
+            "url": "/updateC/65de83d20a2f3130f26b1db7",
+            "method": "PUT",
+            "sortNum": 100000,
+            "created": "2024-02-28T01:27:57.366Z",
+            "modified": "2024-02-28T01:34:22.508Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "name",
+                        "value": "Verano"
+                    },
+                    {
+                        "name": "description",
+                        "value": "Piscina"
+                    }
+                ]
+            },
+            "tests": []
+        }
+    ],
+    "settings": {
+        "options": {
+            "baseUrl": "localhost:2656"
+        }
+    }
+}
