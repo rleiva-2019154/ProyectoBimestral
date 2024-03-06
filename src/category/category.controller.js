@@ -2,6 +2,7 @@
 
 import { checkUpdate } from "../utils/validator.js"
 import Category from "./category.model.js"
+import Product from "../product/product.model.js"
 
 export const test = (req, res) =>{
     console.log('test is running')
@@ -70,3 +71,44 @@ export const listC = async(req, res) => {
         return res.status(500).send({ message: 'Error listing categories' });
     }
 }
+
+export const deleteCategory = async (req, res) => {
+    const session = await Category.startSession();
+    session.startTransaction();
+
+    try {
+        const { id } = req.params;
+        const { transferCategoryId } = req.body; // ID de la categoría a la que se transferirán los productos
+
+        // Verificar si la categoría a eliminar existe
+        const categoryToDelete = await Category.findById(id);
+
+        if (!categoryToDelete) {
+            return res.status(404).json({ message: 'Categoría no encontrada' });
+        }
+
+        // Buscar los productos asociados a la categoría a eliminar
+        const productsToUpdate = await Product.find({ category: id });
+
+        // Actualizar la categoría de los productos
+        if (transferCategoryId && productsToUpdate.length > 0) {
+            await Product.updateMany(
+                { category: id },
+                { $set: { category: transferCategoryId } }
+            );
+        }
+
+        // Eliminar la categoría
+        await Category.deleteOne({ _id: id });
+
+        await session.commitTransaction();
+        session.endSession();
+
+        return res.json({ message: 'Categoría eliminada exitosamente' });
+    } catch (error) {
+        console.error(error);
+        await session.abortTransaction();
+        session.endSession();
+        return res.status(500).json({ message: 'Error al eliminar la categoría' });
+    }
+};

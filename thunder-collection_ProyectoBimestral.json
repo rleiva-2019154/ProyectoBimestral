@@ -1,22 +1,43 @@
 {
     "client": "Thunder Client",
     "collectionName": "ProyectoBimestral",
-    "dateExported": "2024-02-29T03:32:44.083Z",
+    "dateExported": "2024-03-06T05:23:11.064Z",
     "version": "1.1",
     "folders": [
         {
             "_id": "0be2afc0-fa39-4b4a-9a3b-c64533862598",
             "name": "Category",
-            "containerId": "",
+            "containerId": "1943d622-aad1-43df-820c-04f092a7f85c",
             "created": "2024-02-28T00:46:05.420Z",
             "sortNum": 10000
+        },
+        {
+            "_id": "1943d622-aad1-43df-820c-04f092a7f85c",
+            "name": "Admin",
+            "containerId": "",
+            "created": "2024-03-06T04:26:59.315Z",
+            "sortNum": 20000
+        },
+        {
+            "_id": "a9bb0966-dd2c-43da-ad5c-24859e044f94",
+            "name": "Client",
+            "containerId": "",
+            "created": "2024-03-06T04:27:04.937Z",
+            "sortNum": 30000
+        },
+        {
+            "_id": "e21b56dd-be87-44ee-be95-5456b19b0a4d",
+            "name": "Productos",
+            "containerId": "1943d622-aad1-43df-820c-04f092a7f85c",
+            "created": "2024-03-06T04:50:29.037Z",
+            "sortNum": 40000
         }
     ],
     "requests": [
         {
             "_id": "d15ce583-8850-41a6-8d59-83a9f234222a",
             "colId": "99fce810-9ba5-495b-b5ee-2d2902e0322e",
-            "containerId": "",
+            "containerId": "1943d622-aad1-43df-820c-04f092a7f85c",
             "name": "Test",
             "url": "/test",
             "method": "GET",
@@ -30,11 +51,11 @@
         {
             "_id": "d3d83024-b1dd-4776-bf3b-7c5351338684",
             "colId": "99fce810-9ba5-495b-b5ee-2d2902e0322e",
-            "containerId": "",
+            "containerId": "a9bb0966-dd2c-43da-ad5c-24859e044f94",
             "name": "registerClient",
             "url": "/registerClient",
             "method": "POST",
-            "sortNum": 30000,
+            "sortNum": 10000,
             "created": "2024-02-28T00:45:45.675Z",
             "modified": "2024-02-28T00:45:45.675Z",
             "headers": [],
@@ -78,11 +99,11 @@
         {
             "_id": "c1ea3dd7-1131-40ca-bbfb-654f884341f2",
             "colId": "99fce810-9ba5-495b-b5ee-2d2902e0322e",
-            "containerId": "",
+            "containerId": "a9bb0966-dd2c-43da-ad5c-24859e044f94",
             "name": "login",
             "url": "/login",
             "method": "POST",
-            "sortNum": 35000,
+            "sortNum": 20000,
             "created": "2024-02-28T00:45:45.677Z",
             "modified": "2024-02-28T00:45:45.677Z",
             "headers": [],
@@ -104,44 +125,32 @@
             "tests": []
         },
         {
-            "_id": "b21b0f86-28d1-4a7a-b8ac-6c6d7f587c7f",
+            "_id": "166687a0-6ff1-4f4e-9765-23b9569c7db9",
             "colId": "99fce810-9ba5-495b-b5ee-2d2902e0322e",
-            "containerId": "",
-            "name": "registerAdmin",
-            "url": "",
-            "method": "GET",
-            "sortNum": 40000,
-            "created": "2024-02-28T00:45:45.676Z",
-            "modified": "2024-02-28T00:45:45.676Z",
-            "headers": []
-        },
-        {
-            "_id": "88a114e8-5bcf-4861-87db-bb8d4eb3ff90",
-            "colId": "99fce810-9ba5-495b-b5ee-2d2902e0322e",
-            "containerId": "",
-            "name": "update",
-            "url": "/update/65d6b4ac40657d43dbd013de",
-            "method": "PUT",
-            "sortNum": 70000,
-            "created": "2024-02-28T00:45:45.678Z",
-            "modified": "2024-02-28T00:45:45.678Z",
-            "headers": [
-                {
-                    "name": "token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWQ2YjRhYzQwNjU3ZDQzZGJkMDEzZGUiLCJ1c2VybmFtZSI6InJsZWl2YSIsIm5hbWUiOiJPbGl2ZXIiLCJyb2xlIjoiQ0xJRU5UX1JPTEUiLCJpYXQiOjE3MDg2NTM4MzEsImV4cCI6MTcwODY2NDYzMX0.p8mXnFIx61VbkoLgR5K8jNas8X_Xk-PUc7hYG05UHy8"
-                }
-            ],
+            "containerId": "1943d622-aad1-43df-820c-04f092a7f85c",
+            "name": "LoginAdmin",
+            "url": "/login",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-03-06T04:22:02.447Z",
+            "modified": "2024-03-06T04:26:13.713Z",
+            "headers": [],
             "params": [],
             "body": {
                 "type": "formencoded",
                 "raw": "",
                 "form": [
                     {
+                        "name": "email",
+                        "value": "user@gmail.com"
+                    },
+                    {
                         "name": "password",
-                        "value": "12345678"
+                        "value": "useAdmin"
                     }
                 ]
             },
+            "reqType": "get",
             "tests": []
         },
         {
@@ -153,7 +162,7 @@
             "method": "POST",
             "sortNum": 80000,
             "created": "2024-02-28T00:49:03.137Z",
-            "modified": "2024-02-28T01:09:17.284Z",
+            "modified": "2024-03-06T04:48:02.573Z",
             "headers": [],
             "params": [],
             "body": {
@@ -162,14 +171,15 @@
                 "form": [
                     {
                         "name": "name",
-                        "value": "Electrodomesticos"
+                        "value": "Tecnologia "
                     },
                     {
                         "name": "description",
-                        "value": "Estufas"
+                        "value": "Computadoras tablets etc"
                     }
                 ]
             },
+            "reqType": "post",
             "tests": []
         },
         {
@@ -191,11 +201,11 @@
             "colId": "99fce810-9ba5-495b-b5ee-2d2902e0322e",
             "containerId": "0be2afc0-fa39-4b4a-9a3b-c64533862598",
             "name": "UpdateCategory",
-            "url": "/updateC/65de83d20a2f3130f26b1db7",
+            "url": "/updateC/65e7f566668e0b0bfa5db9e0",
             "method": "PUT",
             "sortNum": 100000,
             "created": "2024-02-28T01:27:57.366Z",
-            "modified": "2024-02-28T01:34:22.508Z",
+            "modified": "2024-03-06T04:48:23.509Z",
             "headers": [],
             "params": [],
             "body": {
@@ -204,7 +214,7 @@
                 "form": [
                     {
                         "name": "name",
-                        "value": "Verano"
+                        "value": "Verano 2024"
                     },
                     {
                         "name": "description",
@@ -212,6 +222,247 @@
                     }
                 ]
             },
+            "reqType": "put",
+            "tests": []
+        },
+        {
+            "_id": "1254f8a6-4dbb-43a4-9bac-8493fad383aa",
+            "colId": "99fce810-9ba5-495b-b5ee-2d2902e0322e",
+            "containerId": "a9bb0966-dd2c-43da-ad5c-24859e044f94",
+            "name": "UpdatePassClient",
+            "url": "/updatePassword/65e7f12a8d7692232f117bee",
+            "method": "PUT",
+            "sortNum": 130000,
+            "created": "2024-03-06T04:29:43.212Z",
+            "modified": "2024-03-06T04:34:05.625Z",
+            "headers": [
+                {
+                    "name": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU3ZjEyYThkNzY5MjIzMmYxMTdiZWUiLCJ1c2VybmFtZSI6InJsZWl2YSIsIm5hbWUiOiJSdWRnYXIiLCJyb2xlIjoiQ0xJRU5UX1JPTEUiLCJpYXQiOjE3MDk2OTkzNzMsImV4cCI6MTcwOTcxMDE3M30.qUb7ybb7tMgqiMfJHEqprWvqF_DNmvhgbXbUXd3sXZs"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "oldPassword",
+                        "value": "12345678"
+                    },
+                    {
+                        "name": "newPassword",
+                        "value": "35653118"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "a8baa856-29ce-4a3c-b920-7a39f6d43805",
+            "colId": "99fce810-9ba5-495b-b5ee-2d2902e0322e",
+            "containerId": "a9bb0966-dd2c-43da-ad5c-24859e044f94",
+            "name": "UpdateClient",
+            "url": "/update/65e7f914084d2564affbf469",
+            "method": "PUT",
+            "sortNum": 140000,
+            "created": "2024-03-06T04:34:31.208Z",
+            "modified": "2024-03-06T05:03:25.630Z",
+            "headers": [
+                {
+                    "name": "token",
+                    "value": "",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "name",
+                        "value": "Oliver"
+                    },
+                    {
+                        "name": "password",
+                        "value": "12345678",
+                        "isDisabled": true
+                    }
+                ]
+            },
+            "reqType": "put",
+            "tests": []
+        },
+        {
+            "_id": "a6af5a21-f937-4f66-8d0b-211cc920dd7b",
+            "colId": "99fce810-9ba5-495b-b5ee-2d2902e0322e",
+            "containerId": "a9bb0966-dd2c-43da-ad5c-24859e044f94",
+            "name": "DeleteUser",
+            "url": "/delete/65e7f4b7668e0b0bfa5db9cf",
+            "method": "DELETE",
+            "sortNum": 150000,
+            "created": "2024-03-06T04:42:13.931Z",
+            "modified": "2024-03-06T04:45:21.164Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "password",
+                    "value": "12345678",
+                    "isDisabled": true,
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "password",
+                        "value": "12345678"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "c91ef8e3-efde-4261-bdf0-b964b5b58b2f",
+            "colId": "99fce810-9ba5-495b-b5ee-2d2902e0322e",
+            "containerId": "e21b56dd-be87-44ee-be95-5456b19b0a4d",
+            "name": "Test",
+            "url": "/test",
+            "method": "GET",
+            "sortNum": 160000,
+            "created": "2024-03-06T04:54:09.234Z",
+            "modified": "2024-03-06T04:54:17.794Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "e27be071-ac04-4cae-b92a-4cf9fc9a1b90",
+            "colId": "99fce810-9ba5-495b-b5ee-2d2902e0322e",
+            "containerId": "e21b56dd-be87-44ee-be95-5456b19b0a4d",
+            "name": "SaveProduct",
+            "url": "/saveP",
+            "method": "POST",
+            "sortNum": 170000,
+            "created": "2024-03-06T04:55:50.271Z",
+            "modified": "2024-03-06T05:07:17.388Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "name",
+                        "value": "Cuaderno"
+                    },
+                    {
+                        "name": "description",
+                        "value": "Cuaderno de 100 hojas en linea"
+                    },
+                    {
+                        "name": "stock",
+                        "value": "15"
+                    },
+                    {
+                        "name": "price",
+                        "value": "10"
+                    },
+                    {
+                        "name": "category",
+                        "value": "65e7f575668e0b0bfa5db9e3"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "4ad6a093-8d1f-4fa9-abf5-62e65db23d28",
+            "colId": "99fce810-9ba5-495b-b5ee-2d2902e0322e",
+            "containerId": "e21b56dd-be87-44ee-be95-5456b19b0a4d",
+            "name": "UpdateProduct",
+            "url": "/updateP/65e7f82f0afb245799774930",
+            "method": "PUT",
+            "sortNum": 180000,
+            "created": "2024-03-06T05:02:12.544Z",
+            "modified": "2024-03-06T05:16:52.228Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "price",
+                        "value": "3000",
+                        "isDisabled": true
+                    },
+                    {
+                        "name": "stock",
+                        "value": "100"
+                    }
+                ]
+            },
+            "reqType": "put",
+            "tests": []
+        },
+        {
+            "_id": "b646e963-a52e-47e9-82cf-986d9af62f64",
+            "colId": "99fce810-9ba5-495b-b5ee-2d2902e0322e",
+            "containerId": "e21b56dd-be87-44ee-be95-5456b19b0a4d",
+            "name": "ListProductById",
+            "url": "/getProductById/65e7f82f0afb245799774930",
+            "method": "GET",
+            "sortNum": 190000,
+            "created": "2024-03-06T05:05:54.603Z",
+            "modified": "2024-03-06T05:06:20.865Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "afce9693-f99c-4cd6-a38e-541138c1b18f",
+            "colId": "99fce810-9ba5-495b-b5ee-2d2902e0322e",
+            "containerId": "e21b56dd-be87-44ee-be95-5456b19b0a4d",
+            "name": "ListProducts",
+            "url": "/listP",
+            "method": "GET",
+            "sortNum": 200000,
+            "created": "2024-03-06T05:08:02.320Z",
+            "modified": "2024-03-06T05:08:33.419Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "cb4a5162-a629-4e28-ab07-c406eb9a02d4",
+            "colId": "99fce810-9ba5-495b-b5ee-2d2902e0322e",
+            "containerId": "e21b56dd-be87-44ee-be95-5456b19b0a4d",
+            "name": "SoldProducts",
+            "url": "/findSoldOutProducts",
+            "method": "GET",
+            "sortNum": 210000,
+            "created": "2024-03-06T05:12:15.932Z",
+            "modified": "2024-03-06T05:16:42.162Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "cd377d7f-bdcc-472e-b320-40a5a596316d",
+            "colId": "99fce810-9ba5-495b-b5ee-2d2902e0322e",
+            "containerId": "e21b56dd-be87-44ee-be95-5456b19b0a4d",
+            "name": "DeleteProduct",
+            "url": "/deleteP/65e7fa052952698c80df5ea8",
+            "method": "DELETE",
+            "sortNum": 220000,
+            "created": "2024-03-06T05:19:07.741Z",
+            "modified": "2024-03-06T05:19:57.453Z",
+            "headers": [],
+            "params": [],
             "tests": []
         }
     ],

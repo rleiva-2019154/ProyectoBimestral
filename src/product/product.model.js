@@ -7,7 +7,7 @@ const productSchema = mongoose.Schema({
     },
     description: {
         type: String,
-        require: true``
+        require: true
     },
     stock: {
         type: Number,
