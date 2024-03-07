@@ -32,36 +32,6 @@ export const userDef = async(req,res) =>{
     }
 }
 
-/*export const registerAdmin = async(req, res)=>{
-    try{
-        //Obtener el id del usuario para actualizar
-        let { id } = req.params
-        //obtener los datos a actualizar
-        const { role } = req.body;
-        
-        // Validar que solo se esté intentando actualizar el campo 'role'
-        if (Object.keys(req.body).length !== 1 || !role) {
-          return res.status(400).send({ message: 'Solo se puede actualizar el campo role' });
-        }
-        //Validar si tiene permisos (tokenización) X hoy no lo vemos X
-        //Actualizar la db
-        let updatedUser = await User.findOneAndUpdate(
-            //va a buscar un solo registro
-            {_id: id},  //ObjectId <- hexadecimales(hora sys, version mongo, llave privada...)
-            { role }, //los datos que se van a actualizar 
-            {new: true}
-        )
-        //Validar la actualización
-        if(!updatedUser) return res.status(401).send({message: 'User not found and not update'})
-        //Responde al usuario
-        return res.send({message: `Update user`, updatedUser})
-    }catch(err){
-        console.error(err)
-        if(err.keyValue.username)return res.status(400).send({message: `Username ${err.keyValue.username} is alredy exists`})
-        return res.status(500).send({message: `Error updating account`})
-    }
-}*/
-
 export const registerClient = async(req, res)=>{
     try{
         //Captura el formulario (body)
@@ -81,6 +51,37 @@ export const registerClient = async(req, res)=>{
     }catch(err){
         console.error(err)
         return res.status(500).send({message: 'Error registering user', err: err})
+    }
+}
+
+export const registerAdminCliente = async (req, res) => { // Registra un usuario con ADMIN o CLIENT
+    try {
+        // Capturar el formulario (body)
+        let data = req.body;
+
+        // Verificar si ya existe un usuario con el mismo nombre de usuario
+        const existingUser = await User.findOne({ username: data.username });
+        if (existingUser) {
+            return res.status(400).send({ message: `An user with the same username already exists.` });
+        }
+
+        // Verificar si el rol es válido
+        if (data.role !== 'ADMIN_ROLE' && data.role !== 'CLIENT_ROLE') {
+            return res.status(400).send({ message: 'Invalid role. Role must be ADMIN or CLIENT.' });
+        }
+
+        // Encriptar la contraseña
+        data.password = await encrypt(data.password);
+
+        // Guardar la información en la DB
+        let user = new User(data);
+        await user.save();
+
+        // Responder al usuario  
+        return res.send({ message: `Register successfully, can be logged with email use ${user.email}` });
+    } catch (err) {
+        console.log(err);
+        return res.status(500).send({ message: 'Error registering user', err: err });
     }
 }
 
@@ -224,3 +225,4 @@ export const deleteUser = async (req, res) => {
         return res.status(500).json({ message: 'Error interno del servidor' });
     }
 };
+
